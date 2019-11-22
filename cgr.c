@@ -5,6 +5,12 @@
  */
 
 /*
+ * Local Header Files
+ */
+
+#include "cgr.h"
+
+/*
  * Global Variables
  */
 
