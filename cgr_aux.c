@@ -7,6 +7,12 @@
  */
 
 /*
+ * C Library Functions
+ */
+
+#include <ctype.h> // for Toupper
+
+/*
  * Local Headers
  */
 

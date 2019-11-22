@@ -14,7 +14,7 @@
  */
 
 #include <stdbool.h> // for _Bool
-#include <stdint.h> // for uint64_T
+#include <stdint.h> // for uint64_t
 
 /* 
  * Datatype Definitions
@@ -47,7 +47,7 @@ typedef struct ntide_t {
 
 #define NUM_NTIDES 4 // Maximum Number of ntides (There are only 4 valid chars)
 #define ARGC_COUNT 2 // Program will exit unless there is only 1 argument given
-
+#define HIGH_ORDER_BIT sizeof(uint64_t)
 /*
  * Static Variables
  */
