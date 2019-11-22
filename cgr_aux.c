@@ -17,6 +17,7 @@
  */
 
 #include "cgr_aux.h"
+#include "cgr_plot.h"
 
 /*
  * Auxillary Functions for cgr.c

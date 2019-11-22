@@ -11,6 +11,8 @@
  */
 
 #include "cgr_plot.h"
+#include "cgr_aux.h"
+#include "cgr.h"
 
 /*
  * Plotting functions for CGR
