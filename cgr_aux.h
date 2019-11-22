@@ -43,6 +43,9 @@ typedef struct ntide_t {
  * Function Prototypes
  */
 
+//Function to check if a given int is a power of two 
+_Bool _is_power_of_2( int val );
+
 // Function to reduce the members of coord_t if the high order bit 
 // of the denominator is set. Returns a coord_t structure
 coord_t reduce_coord( coord_t old_coord );
