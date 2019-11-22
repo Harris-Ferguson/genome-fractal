@@ -5,10 +5,19 @@
  */
 
 /*
+ * C Library Headers
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
  * Local Header Files
  */
 
 #include "cgr.h"
+#include "cgr_aux.h"
+#include "cgr_plot.h"
 
 /*
  * Global Variables

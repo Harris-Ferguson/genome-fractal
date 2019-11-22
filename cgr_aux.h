@@ -37,7 +37,8 @@ typedef struct ntide_t {
  * Constants
  */
 
-#define NUM_NTIDES 4
+#define NUM_NTIDES 4 // Maximum Number of ntides (There are only 4 valid chars)
+#define ARGC_COUNT 2 // Program will exit unless there is only 1 argument given
 
 /*
  * Function Prototypes
