@@ -15,6 +15,12 @@
 #include <netpbm/pbm.h>
 
 /*
+ * Local Headers
+ */
+
+#include "cgr_aux.h"
+
+/*
  * Global Variables
  */
 
@@ -39,6 +45,6 @@ void output_plot( void );
  * Given a coord_t structure, coordinate fraction will be scaled up by 
  * the Scale global variable
  */
-void scale_coord( coord_t coord );
+unsigned scale_coord( coord_t coord );
 
 #endif // PLOT_H

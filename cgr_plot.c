@@ -36,10 +36,14 @@ unsigned scale_coord ( struct coord_t coord )
     // Assign Scale to a uint64_t variable to compare to coord.denom which is
     // the same type
     uint64_t scale = Scale;
+    // if a coord has overflowed, output what was plotted so far 
+    // and exit with an error. We should never reach this point, 
+    // and if we do it indicates a failure of reduce_point in
+    // cgr_aux.c
     if ( coord.denom == 0 )
     {
-        fprintf( stderr, "Coordinate overflowed\n");
-        print_plot();
+        fprintf( stderr, "Error: Coordinate overflowed\n");
+        output_plot();
         free(Plot);
         exit( EXIT_FAILURE );
     }
@@ -60,7 +64,7 @@ unsigned scale_coord ( struct coord_t coord )
 
 }
 
-/ plot_point
+// plot_point
 // in:
 //  point_t structure (point)
 // out:
