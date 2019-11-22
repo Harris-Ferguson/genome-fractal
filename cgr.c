@@ -4,6 +4,11 @@
  * CMPT 214 Assignment 3
  */
 
+/*
+ * Global Variables
+ */
+
+int Scale;
 
 // Main
 // In:
