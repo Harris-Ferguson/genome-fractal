@@ -5,6 +5,9 @@
  * cgr_plot.h header file
  */
 
+#ifndef PLOT_H
+#define PLOT_H
+
 /*
  * Function Prototypes
  */
@@ -23,4 +26,6 @@ void output_plot( void );
  * Given a coord_t structure, coordinate fraction will be scaled up by 
  * the Scale global variable
  */
-void scale_coord( coord_t coord);
+void scale_coord( coord_t coord );
+
+#endif // PLOT_H
