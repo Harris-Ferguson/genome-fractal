@@ -8,8 +8,10 @@
  * C Library Headers
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> // for Getchar, printf, fprintf
+#include <stdlib.h> // for calloc, free, strtol, NULL
+#include <stdbool.h> // for TRUE
+#include <netpbm/pbm.h>
 
 /*
  * Local Header Files
@@ -76,11 +78,11 @@ int main ( int argc, char *argv[] )
     // Allocate memory for Plot
     // need room for Scale * Scale graph points (scaled by sizeof char)
     // First, each pointer to vector is allocated
-    Plot = (char**)malloc( Scale * sizeof(char*) );
+    Plot = (bit**)malloc( Scale * sizeof(bit*) );
     for( int i = 0 ; i < Scale ; i++ )
     {
         // Then, each pointer to character is allocated
-        Plot[i] = (char*)malloc( Scale * sizeof(char) ); 
+        Plot[i] = (bit*)malloc( Scale * sizeof(bit) ); 
     }
     // Check that Plot is not NULL
     if ( Plot == NULL )
@@ -88,8 +90,7 @@ int main ( int argc, char *argv[] )
         fprintf( stderr, "Error: Memory Allocation Failed!\n");
         exit( EXIT_FAILURE );
     }
-    // initialize plot with space characters before entering the loop
-    initialize_plot();
+    
     // First point structure which is the centre point of the graph, at 1/2,1/2
     struct point_t current_point = { { 1, 2 }, { 1, 2 } }; 
 
@@ -101,8 +102,8 @@ int main ( int argc, char *argv[] )
     {
         fprintf( stderr, "Warning: Non-nucleotide letter in input\n");
     }
-    // Print the resulting plot from the above loop
-    print_plot();
+    // Produce the plot
+    output_plot();
 
     // De-allocate Plot and Exit
     free( Plot );

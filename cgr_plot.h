@@ -9,6 +9,19 @@
 #define PLOT_H
 
 /*
+ * C library Headers
+ */
+
+#include <netpbm/pbm.h>
+
+/*
+ * Global Variables
+ */
+
+bit** Plot; 
+int valid_char_reached = 0;
+
+/*
  * Function Prototypes
  */
 

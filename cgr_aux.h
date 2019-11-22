@@ -5,8 +5,16 @@
  * cgr_aux.h header file
  * CMPT 214 Assignment 4
  */
+
 #ifndef AUX_H
 #define AUX_H
+
+/*
+ * C Library Headers
+ */
+
+#include <stdbool.h> // for _Bool
+#include <stdint.h> // for uint64_T
 
 /* 
  * Datatype Definitions
@@ -18,12 +26,12 @@
 typedef struct coord_t {
     uint64_t numer; //Numerator of the rational number
     uint64_t denom; //Denominator of the rational number
-};
+} coord_t;
 // point_t is made of 2 coord_t points, which are an x and a y coordinate
 typedef struct point_t {
     struct coord_t x_coord; //x coordinate
     struct coord_t y_coord; //y coordinate
-};
+} point_t;
 // ntide_t is a vertex point and a letter cooresponding to the 
 // appropriate nucleotide letter for the vertex
 // The coordinate points of the vertex can only be 0 or 1, since they
@@ -31,7 +39,7 @@ typedef struct point_t {
 typedef struct ntide_t {
     char ntide;
     struct point_t vertex;
-};
+} ntide_t;
 
 /*
  * Constants
@@ -45,7 +53,7 @@ typedef struct ntide_t {
  */
 
 //Function to check if a given int is a power of two 
-_Bool _is_power_of_2( int val );
+_Bool is_power_of_2( int val );
 
 // Function to reduce the members of coord_t if the high order bit 
 // of the denominator is set. Returns a coord_t structure
