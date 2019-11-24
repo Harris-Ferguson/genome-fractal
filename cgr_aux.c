@@ -36,6 +36,37 @@ _Bool is_power_of_2 ( int val )
     return (val && !(val & (val - 1) ) );
 }
 
+
+// is_valid_tide
+// in:
+//  character (tide)
+// out:
+//  TRUE if tide is one of: {A,C,G,T}
+//  FALSE if tide is not one of the above
+// assumes:
+//  Nucleotide character tide is a Capital letter (if true)
+// effects:
+//  if this function returns false AND tide is not alphanumeric,
+//  global variable valid_char_reached is set to 1
+_Bool is_valid_tide ( char tide )
+{
+    if ( tide == 'A' || tide == 'C' || tide == 'G' || tide == 'T' )
+    {
+        return true;
+    }
+    else
+    {
+        // If we get here, that means char tide is a letter
+        // but not a valid nucleotide. A warning message will be produced
+        // by main()
+        if ( isalnum( tide ) )
+        {
+            valid_char_reached = 1;
+        }
+        return false;
+    }
+}
+
 // reduce_coord
 // in:
 //  coord_t structure  (old_coord)

@@ -1,0 +1,23 @@
+a8450c7 (HEAD -> master, tag: V1.1, origin/master) Fixed a syntax error, and made the error check in scale_coord call the correct function
+b39205c cgr_aux.o wasn't tracked
+07cd573 Changed ntide variables from static to global
+a06fa35 Fixed some internal linkage
+1f6a74e Defined HIGH_ORDER_BIT
+b83f867 added ntide static variables for determine_midpoint to use
+9f5ac15 cgr.o header file wasn't tracked, adding it
+70ac802 Fixing warnings and errors to allow compilation Defined c library headers in various files changed Plot allocation in cgr.c -main() from Char to bit defined valid_char_reached in cgr_plot.h
+9dcf4e8 added rules and dependancies to makefile, defined ARGC_COUNT in cgr_aux.h and added C library includes to cgr.c
+3ec0bb6 added function bodies to cgr_aux.c and added a missing function definition to cgr_aux.h
+231cde7 Added function prototypes and datatype definitions to cgr_aux.h, added missing ifndef statement to cgr_plot.h
+c15bd69 Added function bodies to cgr_plot.c and prototpyes to cgr_plot.h
+7dcb0f0 Added constant definitions of MAX_SCALE and MIN_SCALE to cgr.h, cgr.h included in cgr.c
+27c5a5c Added makefile, empy at this point
+65b2d5f added source code and header files for cgr
+9111041 (origin/cgr_main, cgr_main) Added Scale global variable declaration to main
+dfcb59a changed cgr.c to only include main()
+1922b48 Merge branch 'master' of https://git.cs.usask.ca/haf094/cgr
+236bb6a Delete CHANGELOG
+f03e12b Added CHANGELOG, and cgr.c source from Assignment 3
+54a8935 Add CHANGELOG
+a21784b (tag: V1) cgr.c
+f42f629 README.md

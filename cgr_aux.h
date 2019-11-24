@@ -48,6 +48,8 @@ typedef struct ntide_t {
 #define NUM_NTIDES 4 // Maximum Number of ntides (There are only 4 valid chars)
 #define ARGC_COUNT 2 // Program will exit unless there is only 1 argument given
 #define HIGH_ORDER_BIT sizeof(uint64_t)
+
+
 /*
  * Static Variables
  */
@@ -62,7 +64,10 @@ ntide_t tide_T = { 'T', { { 1, 1 }, { 0, 0 } } };
  * Function Prototypes
  */
 
-//Function to check if a given int is a power of two 
+// Function to check if the input character is a valid nucleotide character
+_Bool is_valid_tide ( char tide );
+
+// Function to check if a given int is a power of two 
 _Bool is_power_of_2( int val );
 
 // Function to reduce the members of coord_t if the high order bit 
