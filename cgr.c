@@ -70,26 +70,14 @@ int main ( int argc, char *argv[] )
         {
         fprintf( stderr, "Error: Scale argument is not a power of two!\n");
         exit( EXIT_FAILURE );
-   	}
+   		}
 
     // Declare currentTide to use for getChar()
     char currentTide;
-
-    // Allocate memory for Plot
-    // need room for Scale * Scale graph points (scaled by sizeof char)
-    // First, each pointer to vector is allocated
-    Plot = (bit**)malloc( Scale * sizeof(bit*) );
-    for( int i = 0 ; i < Scale ; i++ )
-    {
-        // Then, each pointer to character is allocated
-        Plot[i] = (bit*)malloc( Scale * sizeof(bit) ); 
-    }
-    // Check that Plot is not NULL
-    if ( Plot == NULL )
-    {
-        fprintf( stderr, "Error: Memory Allocation Failed!\n");
-        exit( EXIT_FAILURE );
-    }
+	// Initialize and allocate the bits of Plot    
+	pm_init( "cgr", 0 );
+	Plot = pbm_allocarray (Scale, Scale);
+	
     
     // First point structure which is the centre point of the graph, at 1/2,1/2
     struct point_t current_point = { { 1, 2 }, { 1, 2 } }; 
@@ -106,6 +94,6 @@ int main ( int argc, char *argv[] )
     output_plot();
 
     // De-allocate Plot and Exit
-    free( Plot );
+    pbm_freearray( Plot, Scale );
     return EXIT_SUCCESS;
 }
