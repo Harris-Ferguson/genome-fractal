@@ -9,23 +9,17 @@
 #define PLOT_H
 
 /*
- * C library Headers
+ * Standard Headers
  */
 
 #include <netpbm/pbm.h>
 
 /*
- * Local Headers
- */
-
-#include "cgr_aux.h"
-
-/*
  * Global Variables
  */
 
-bit** Plot; 
-int valid_char_reached = 0;
+extern bit** Plot; 
+int valid_char_reached;
 
 /*
  * Function Prototypes

@@ -7,12 +7,23 @@
  */
 
 /*
+ * C Library
+ */
+#include <netpbm/pbm.h>
+
+/*
  * Local Headers
  */
 
-#include "cgr_plot.h"
 #include "cgr_aux.h"
+#include "cgr_plot.h"
 #include "cgr.h"
+
+/*
+ * Global Variables
+ */
+
+bit** Plot; 
 
 /*
  * Plotting functions for CGR
