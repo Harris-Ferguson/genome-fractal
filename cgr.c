@@ -81,6 +81,11 @@ int main ( int argc, char *argv[] )
 	{
 		Plot[i] = pbm_allocrow( Scale );
 	}
+	if ( Plot == NULL )
+	{
+		fprintf( stderr, "Memory allocation failed\n" );
+		exit( EXIT_FAILURE );
+	}
 	
     
     // First point structure which is the centre point of the graph, at 1/2,1/2
