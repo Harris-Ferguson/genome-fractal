@@ -20,3 +20,4 @@ cgr_plot.o: cgr_plot.c cgr_plot.h
 
 clean:
 	rm -f cgr.o cgr_aux.o cgr_plot.o
+	rm -f cgr

@@ -47,18 +47,7 @@ typedef struct ntide_t {
 
 #define NUM_NTIDES 4 // Maximum Number of ntides (There are only 4 valid chars)
 #define ARGC_COUNT 2 // Program will exit unless there is only 1 argument given
-#define HIGH_ORDER_BIT sizeof(uint64_t)
-
-
-/*
- * Static Variables
- */
-
-// 4 ntide_t variables, corresponding to each Vertex of the graph
-ntide_t tide_A = { 'A', { { 0, 0 }, { 0, 0 } } };
-ntide_t tide_C = { 'C', { { 0, 0 }, { 1, 1 } } };
-ntide_t tide_G = { 'G', { { 1, 1 }, { 1, 1 } } };
-ntide_t tide_T = { 'T', { { 1, 1 }, { 0, 0 } } };
+#define HIGH_ORDER_BIT sizeof(uint64_t) // Used to check for overflow
 
 /*
  * Function Prototypes

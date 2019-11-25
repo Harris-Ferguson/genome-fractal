@@ -20,6 +20,15 @@
 #include "cgr_plot.h"
 
 /*
+ * Global Variables
+ */
+
+static struct ntide_t tide_A = { 'A', { { 0, 0 }, { 0, 0 } } };
+static struct ntide_t tide_C = { 'C', { { 0, 0 }, { 1, 1 } } };
+static struct ntide_t tide_G = { 'G', { { 1, 1 }, { 1, 1 } } };
+static struct ntide_t tide_T = { 'T', { { 1, 1 }, { 0, 0 } } };
+
+/*
  * Auxillary Functions for cgr.c
  */
 
