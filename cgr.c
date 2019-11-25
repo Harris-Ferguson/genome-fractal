@@ -100,6 +100,7 @@ int main ( int argc, char *argv[] )
         fprintf( stderr, "Warning: Non-nucleotide letter in input\n");
     }
     // Produce the plot
+    pbm_writepbminit( stderr, Scale, Scale, false);
     output_plot();
 
     // De-allocate Plot and Exit
