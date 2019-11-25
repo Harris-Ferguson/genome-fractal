@@ -11,7 +11,7 @@
 
 extern int Scale;
 
-#define MIN_SCALE 36
+#define MIN_SCALE 32
 #define MAX_SCALE 4096
 
 #endif // CGR_H
