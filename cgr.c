@@ -76,11 +76,7 @@ int main ( int argc, char *argv[] )
     char currentTide;
 	// Initialize and allocate the bits of Plot    
 	pm_init( "cgr", 0 );
-	Plot = pbm_allocarray();
-	for ( int i = 0 ; i < Scale ; i++)
-	{
-		Plot[i] = pbm_allocarray();
-	}
+	Plot = pbm_allocarray( Scale, Scale );
 
 	if ( Plot == NULL )
 	{
