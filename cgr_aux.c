@@ -24,10 +24,12 @@
  */
 
 static struct ntide_t tide_A = { 'A', { { 0, 0 }, { 0, 0 } } };
-static struct ntide_t tide_C = { 'C', { { 0, 0 }, { 1, 1 } } };
+static struct ntide_t tide_C = { 'C', { { 1, 1 }, { 0, 0 } } };
 static struct ntide_t tide_G = { 'G', { { 1, 1 }, { 1, 1 } } };
-static struct ntide_t tide_T = { 'T', { { 1, 1 }, { 0, 0 } } };
-
+static struct ntide_t tide_T = { 'T', { { 0, 0 }, { 1, 1 } } };
+// The vertices C and T are switched for array storage
+// CGR plot cannot be printed properly otherwise
+// see extern documenation
 /*
  * Auxillary Functions for cgr.c
  */

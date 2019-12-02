@@ -93,7 +93,7 @@ void plot_point ( struct point_t point )
 
 void output_plot ( void )
 {
-	for ( int i = Scale - 1 ; 0 < i ; i--)
+	for ( int i = Scale - 1 ; i > 0 ; i--)
 	{
 		pbm_writepbmrow( stdout, Plot[i], Scale, false );
 	}
