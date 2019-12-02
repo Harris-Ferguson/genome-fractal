@@ -76,11 +76,12 @@ int main ( int argc, char *argv[] )
     char currentTide;
 	// Initialize and allocate the bits of Plot    
 	pm_init( "cgr", 0 );
-	Plot = (bit**)pbm_allocrow ( Scale );
-	for ( int i = 0 ; i < Scale ; i++ )
+	Plot = pbm_allocarray();
+	for ( int i = 0 ; i < Scale ; i++)
 	{
-		Plot[i] = pbm_allocrow( Scale );
+		Plot[i] = pbm_allocarray();
 	}
+
 	if ( Plot == NULL )
 	{
 		fprintf( stderr, "Memory allocation failed\n" );
@@ -100,7 +101,7 @@ int main ( int argc, char *argv[] )
         fprintf( stderr, "Warning: Non-nucleotide letter in input\n");
     }
     // Produce the plot
-    pbm_writepbminit( stderr, Scale, Scale, false);
+    pbm_writepbminit( stdout, Scale, Scale, false );
     output_plot();
 
     // De-allocate Plot and Exit
