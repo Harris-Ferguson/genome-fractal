@@ -88,7 +88,7 @@ void plot_point ( struct point_t point )
 {
     uint64_t x_coord = scale_coord( point.x_coord );
     uint64_t y_coord = scale_coord( point.y_coord );
-    Plot[x_coord][y_coord] = '*';
+    Plot[x_coord][y_coord] = PBM_BLACK;
 }
 
 void output_plot ( void )
